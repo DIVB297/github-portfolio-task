@@ -16,7 +16,10 @@ A modern, responsive GitHub profile page clone built with Next.js 14, TypeScript
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **API**: GitHub REST API (no authentication required for public data)
+- **Charting**: ECharts (echarts-for-react)
+- **APIs**: 
+  - GitHub REST API (user profile - no auth required)
+  - GitHub GraphQL API (contribution graph - requires token)
 
 ## Project Structure
 
@@ -48,6 +51,29 @@ github-portfolio-task/
 # Install dependencies
 npm install
 ```
+
+### Environment Variables (Optional)
+
+To fetch real contribution data, you need a GitHub Personal Access Token:
+
+1. Copy the example environment file:
+```bash
+cp .env.local.example .env.local
+```
+
+2. Get a GitHub token:
+   - Go to https://github.com/settings/tokens
+   - Click "Generate new token (classic)"
+   - Give it a name (e.g., "GitHub Profile App")
+   - No scopes needed for public data
+   - Copy the token
+
+3. Add your token to `.env.local`:
+```
+NEXT_PUBLIC_GITHUB_TOKEN=your_token_here
+```
+
+**Note**: Without a token, the app will use mock contribution data. All other features work without authentication.
 
 ### Development
 
