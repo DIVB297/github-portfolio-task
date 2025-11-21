@@ -23,8 +23,8 @@ export default function PopularRepositories() {
   return (
     <div>
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-base font-semibold text-github-text">Popular repositories</h2>
-        <Link href="#" className="text-sm text-github-link hover:underline">
+        <h2 className="text-base font-semibold text-github-text dark:text-github-dark-text">Popular repositories</h2>
+        <Link href="#" className="text-sm text-github-link dark:text-github-dark-link hover:underline">
           Customize your pins
         </Link>
       </div>
@@ -33,29 +33,29 @@ export default function PopularRepositories() {
         {repos.map((repo) => (
           <div
             key={repo.id}
-            className="border border-github-border rounded-lg p-4 bg-white hover:bg-github-hover transition-colors"
+            className="border border-github-border dark:border-github-dark-border rounded-lg p-4 bg-white dark:bg-github-dark-hover hover:bg-github-hover dark:hover:bg-gray-800 transition-colors"
           >
             <div className="space-y-3">
               {/* Repo Name */}
               <div className="flex items-center gap-2">
-                <RiGitRepositoryLine className="w-4 h-4 text-github-muted flex-shrink-0" />
-                <Link href="#" className="text-sm font-semibold text-github-link hover:underline truncate">
+                <RiGitRepositoryLine className="w-4 h-4 text-github-muted dark:text-github-dark-muted flex-shrink-0" />
+                <Link href="#" className="text-sm font-semibold text-github-link dark:text-github-dark-link hover:underline truncate">
                   {repo.name}
                 </Link>
-                <span className="px-2 py-0.5 text-xs border border-github-border rounded-full text-github-muted flex-shrink-0">
+                <span className="px-2 py-0.5 text-xs border border-github-border dark:border-github-dark-border rounded-full text-github-muted dark:text-github-dark-muted flex-shrink-0">
                   {repo.visibility === 'public' ? 'Public' : 'Private'}
                 </span>
               </div>
 
               {/* Description */}
               {repo.description && (
-                <p className="text-xs text-github-muted line-clamp-2">
+                <p className="text-xs text-github-muted dark:text-github-dark-muted line-clamp-2">
                   {repo.description}
                 </p>
               )}
 
               {/* Meta Info */}
-              <div className="flex items-center gap-4 text-xs text-github-muted">
+              <div className="flex items-center gap-4 text-xs text-github-muted dark:text-github-dark-muted">
                 {repo.language && (
                   <div className="flex items-center gap-1">
                     <span

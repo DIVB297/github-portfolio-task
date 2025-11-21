@@ -36,12 +36,12 @@ export default function ProfilePage({ params }: PageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-[#f6f8fa]">
+    <div className="min-h-screen bg-[#f6f8fa] dark:bg-[#0d1117]">
       <Header username={username} />
       
       {/* Mobile/Tablet: Show profile info before tabs */}
       <div className="lg:hidden">
-        <div className="bg-white border-b border-github-border">
+        <div className="bg-white dark:bg-github-dark-bg border-b border-github-border dark:border-github-dark-border">
           <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-6">
             <ProfileSidebar username={username} isMobile={true} />
           </div>
