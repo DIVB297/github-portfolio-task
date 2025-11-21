@@ -16,10 +16,8 @@ const ThemeContext = createContext<ThemeContextType>({
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     // Check if there's a saved theme preference
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     if (savedTheme) {
