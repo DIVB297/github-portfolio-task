@@ -21,10 +21,10 @@ export default function ProfileContent({ username }: ProfileContentProps) {
 
       {/* Contribution Activity Section */}
       <div>
-        <h2 className="text-base font-semibold text-github-text mb-4">Contribution activity</h2>
-        <div className="text-sm text-github-muted">
-          <p className="mb-2 font-semibold text-github-text">October 2025</p>
-          <div className="text-xs text-github-muted italic">
+        <h2 className="text-base font-semibold text-github-text dark:text-github-dark-text mb-4">Contribution activity</h2>
+        <div className="text-sm text-github-muted dark:text-github-dark-muted">
+          <p className="mb-2 font-semibold text-github-text dark:text-github-dark-text">October 2025</p>
+          <div className="text-xs text-github-muted dark:text-github-dark-muted italic">
             No contribution activity in this period
           </div>
         </div>

@@ -24,7 +24,7 @@ export default function ContributionGraph({ username }: ContributionGraphProps) 
   }, [username]);
 
   if (loading) {
-    return <div className="h-32 bg-github-hover animate-pulse rounded" />;
+    return <div className="h-32 bg-github-hover dark:bg-github-dark-hover animate-pulse rounded" />;
   }
 
   const totalContributions = contributions.reduce((sum, day) => sum + day.count, 0);
@@ -163,12 +163,12 @@ export default function ContributionGraph({ username }: ContributionGraphProps) 
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <h3 className="text-base font-semibold text-github-text">
+        <h3 className="text-base font-semibold text-github-text dark:text-github-dark-text">
           {totalContributions} contributions in the last year
         </h3>
       </div>
 
-      <div className="overflow-x-auto bg-white border border-github-border rounded-md p-3">
+      <div className="overflow-x-auto bg-white dark:bg-github-dark-hover border border-github-border dark:border-github-dark-border rounded-md p-3">
         <ReactECharts
           option={option}
           style={{ height: '150px', width: '100%', minWidth: `${weekCount * 11}px` }}
@@ -176,7 +176,7 @@ export default function ContributionGraph({ username }: ContributionGraphProps) 
         />
       </div>
 
-      <div className="flex items-center gap-2 text-xs text-github-muted">
+      <div className="flex items-center gap-2 text-xs text-github-muted dark:text-github-dark-muted">
         <span>Learn how we count contributions</span>
         <div className="flex items-center gap-2 ml-auto">
           <span>Less</span>

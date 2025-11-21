@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ThemeProviderWrapper from "@/components/ThemeProviderWrapper";
 
 export const metadata: Metadata = {
   title: "GitHub Profile",
@@ -13,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeProviderWrapper>
+          {children}
+        </ThemeProviderWrapper>
+      </body>
     </html>
   );
 }
